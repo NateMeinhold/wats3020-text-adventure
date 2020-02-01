@@ -1,21 +1,13 @@
-/* JS for WATS 3020 Text Adventure */
+/* JS for Text Adventure */
 let playerName = "";
 let choiceList = [];
 let currentPage = null;
 
-///////////////////////////////////////////////////
-//////// TODOs ///////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-// Fill in the blanks below to complete each TODO task.                       //
-////////////////////////////////////////////////////////////////////////////////
-
-// TODO: Prompt the user for their name. Store the name in the variable `playerName`.
-playerName = window.prompt("What is your Name?","Nathan");
+//Prompt player for their name
+playerName = window.prompt("What is your Name?","Player1");
 
 
-// TODO: Create a function called `getCurrentPage()`. It should accept one
-// parameter, which is the `slug` for the current page. This function will fetch
-// the current page and return a page object using the `slug` value for a key.
+// Get the current page
 function getCurrentPage(slug){
  currentPage = storyData[slug];
  return currentPage;
@@ -30,9 +22,7 @@ function recordChoice(slug) {
 }
 
 
-// TODO: Create a function called `undoChoice()` that will remove the last
-// `slug` in the `choiceList` Array and then will return the last `slug` in the
-// `choiceList` Array.
+// Undo choice function...to go back if you need to. 
 function undoChoice(){
     choiceList.pop();
     if (choiceList.length === 0){
@@ -82,7 +72,7 @@ var storyData = {
                 off to the East.`,
         choices: [
             {
-                text: `Fly over the farm to the West.`,
+                text: `Do Something Else`,
                 link: 'p2'
             }, {
                 text: `Fly back home to your nest in the forest.`,
