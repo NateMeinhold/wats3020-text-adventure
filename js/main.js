@@ -4,7 +4,7 @@ let choiceList = [];
 let currentPage = null;
 
 //Prompt player for their name
-playerName = window.prompt("What is your Name?","Player1");
+playerName = window.prompt("What is your Name?","Nathan");
 
 
 // Get the current page
@@ -72,7 +72,7 @@ var storyData = {
                 off to the East.`,
         choices: [
             {
-                text: `Do Something Else`,
+                text: `Fly over the farm to the West.`,
                 link: 'p2'
             }, {
                 text: `Fly back home to your nest in the forest.`,
